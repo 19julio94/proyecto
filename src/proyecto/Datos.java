@@ -30,7 +30,9 @@ public class Datos {
         try {
            
          escribir= new PrintWriter(f);
-            JOptionPane.showInputDialog("Introduce tus inicinales \n");
+            String esc=JOptionPane.showInputDialog("Introduce tus inicinales");
+            escribir.append(esc);
+            escribir.append("\n");
                       
         } catch (FileNotFoundException ex) {
             System.out.println("erro escritura"+ ex.getMessage());
