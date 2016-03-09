@@ -13,18 +13,22 @@ public class Lecturas {
 
     ArrayList<Pregunta> lista = new ArrayList();
 
-   
-
     public void lerFich() {
         Scanner sc = null;
         try {
-            File f = new File();
+            File f = new File("videojuegos.txt");
             sc = new Scanner(f);
-            // tamen : sc = new Scanner(new File(nomeFich));
             while (sc.hasNextLine()) {
                 String res = sc.nextLine();
-                System.out.println(res);
-                // tamen:  System.out.println(sc.nextLine());
+                //   System.out.println(res);
+                String[] cachos = res.split(",");
+//                String[] cachos2 = res.split("@");
+//                String[] cachos3 = res.split("@");
+//                String[] cachos4 = res.split("@");
+                
+
+                System.out.println(cachos[1]+("\n") + cachos[2] + cachos[3] + cachos[4]);
+
             }
 
         } catch (FileNotFoundException ex) {
