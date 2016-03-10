@@ -2,7 +2,6 @@ package proyecto;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -11,12 +10,12 @@ import java.util.Scanner;
  */
 public class Lecturas {
 
-    ArrayList<Pregunta> lista = new ArrayList();
+    
 
-    public void lerFich() {
+    public static void lerFich() {
         Scanner sc = null;
         try {
-            File f = new File("videojuegos.txt");
+            File f = new File("build/classes/proyecto/videojuegos.txt");
             sc = new Scanner(f);
             while (sc.hasNextLine()) {
                 String res = sc.nextLine();
@@ -25,9 +24,9 @@ public class Lecturas {
 //                String[] cachos2 = res.split("@");
 //                String[] cachos3 = res.split("@");
 //                String[] cachos4 = res.split("@");
-                
+                Pregunta.getLista().add(new Pregunta(cachos[0],cachos[1],cachos[2],cachos[3],cachos[4]));
 
-                System.out.println(cachos[1]+("\n") + cachos[2] + cachos[3] + cachos[4]);
+                //System.out.println(cachos[0]+("\n") + cachos[1] + cachos[2] + cachos[3]);
 
             }
 
@@ -37,5 +36,7 @@ public class Lecturas {
             sc.close();
         }
     }
+    
+    
 
 }

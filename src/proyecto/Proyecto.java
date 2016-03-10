@@ -1,6 +1,5 @@
 package proyecto;
 
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -10,8 +9,8 @@ public class Proyecto {
 
     public static void main(String[] args) {
 
-        new Lecturas().lerFich();
-        
+        Lecturas.lerFich();
+        Pregunta.preguntar();
 //        Datos obj1 = new Datos();
 //        Cronometro t = new Cronometro();
 //        t.iniciar();
