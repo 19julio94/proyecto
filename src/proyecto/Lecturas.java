@@ -21,7 +21,7 @@ public class Lecturas {
             while (sc.hasNextLine()) {
                 String res = sc.nextLine();
                 //   System.out.println(res);
-                String[] cachos = res.split(",");
+                String[] cachos = res.split("@");
 //                String[] cachos2 = res.split("@");
 //                String[] cachos3 = res.split("@");
 //                String[] cachos4 = res.split("@");
