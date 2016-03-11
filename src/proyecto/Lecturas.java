@@ -3,14 +3,13 @@ package proyecto;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Julián
  */
 public class Lecturas {
-
-    
 
     public static void lerFich() {
         Scanner sc = null;
@@ -19,14 +18,10 @@ public class Lecturas {
             sc = new Scanner(f);
             while (sc.hasNextLine()) {
                 String res = sc.nextLine();
-                //   System.out.println(res);
-                String[] cachos = res.split("@");
-//                String[] cachos2 = res.split("@");
-//                String[] cachos3 = res.split("@");
-//                String[] cachos4 = res.split("@");
-                Pregunta.getLista().add(new Pregunta(cachos[0],cachos[1],cachos[2],cachos[3],cachos[4]));
 
-                //System.out.println(cachos[0]+("\n") + cachos[1] + cachos[2] + cachos[3]);
+                String[] cachos = res.split("@");
+
+                Pregunta.getLista().add(new Pregunta(cachos[0], cachos[1], cachos[2], cachos[3], cachos[4]));
 
             }
 
@@ -37,6 +32,25 @@ public class Lecturas {
         }
     }
     
+      public static void leeriniciales() {
+        Scanner Scan = null;
+        try {
+            File fi = new File("Iniciales.txt");
+            Scan = new Scanner(fi);
+            while (Scan.hasNextLine()) {
+                String resp = Scan.next();
+                JOptionPane.showMessageDialog(null, resp);
+
+            }
+
+        } catch (FileNotFoundException ex) {
+            System.out.println("erro1 " + ex.toString());
+        } finally {
+            Scan.close();
+        }
+    }
+
+
     
 
 }

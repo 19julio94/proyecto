@@ -58,14 +58,14 @@ public class Pregunta {
             respuesta = JOptionPane.showInputDialog(lista.get(i).getId()+ " " + lista.get(i).getPregunta()+"\n"+lista.get(i).getRespuestaA() + "\n" + lista.get(i).getRespuestaB()+"\n"+lista.get(i).getRespuestaC());
             if(respuesta.equalsIgnoreCase("a")||respuesta.equalsIgnoreCase("b")||respuesta.equalsIgnoreCase("c")){
                 if(respuesta.equalsIgnoreCase(lista.get(i).correcta)){
-                    System.out.println("correcto");
+                    JOptionPane.showMessageDialog(null,"Correcto");
                     condicion=false;
                 }else{
-                    System.out.println("incorrecto");
+                    JOptionPane.showMessageDialog(null,"Incorrecto");
                     condicion=false;
                 }
             }else{
-                System.out.println("Formato de respuesta incorrecto");
+                JOptionPane.showMessageDialog(null,"Formato no permitido");
                 condicion=true;
             }
             }while(condicion);
