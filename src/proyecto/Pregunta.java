@@ -51,6 +51,7 @@ public class Pregunta {
     
 
     public static void preguntar(){
+        int contador=0;
         for(int i=0;i<lista.size();i++){
             String respuesta;
             boolean condicion=false;
@@ -60,6 +61,7 @@ public class Pregunta {
                 if(respuesta.equalsIgnoreCase(lista.get(i).correcta)){
                     JOptionPane.showMessageDialog(null,"Correcto");
                     condicion=false;
+                    contador++;
                 }else{
                     JOptionPane.showMessageDialog(null,"Incorrecto");
                     condicion=false;
@@ -70,6 +72,7 @@ public class Pregunta {
             }
             }while(condicion);
         }
+        JOptionPane.showMessageDialog(null,"Numero de aciertos "+contador);
     }
     
     

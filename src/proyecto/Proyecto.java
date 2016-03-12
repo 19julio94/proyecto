@@ -8,8 +8,7 @@ public class Proyecto {
 
     public static void main(String[] args) {
 
-//       Lecturas.lerFich();
-//       Pregunta.preguntar();
+
         Datos obj1 = new Datos();
         Cronometro t = new Cronometro();
         t.iniciar();
