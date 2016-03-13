@@ -1,5 +1,5 @@
 package proyecto;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Julián
@@ -17,11 +17,13 @@ public class Proyecto {
 
         Lecturas.lerFich();
         Pregunta.preguntar();
-//       Lecturas.leeriniciales();
-
-        //*****************************************************      
+      
+        
+ //*****************************************************      
         t.parar();
-        System.out.println("Minutos " + t.getMinutos() + "\n" + "segundos " + t.getSegundos());
-
+        
+        JOptionPane.showMessageDialog(null,"Minutos " + t.getMinutos() + "\n" + "segundos " + t.getSegundos());
+        Lecturas.leeriniciales();
     }
 }
+

@@ -1,10 +1,10 @@
 package proyecto;
-
+import Imp.JPANE;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
+       
 /**
  *
  * @author Julián
@@ -31,6 +31,7 @@ public class Lecturas {
             sc.close();
         }
     }
+    
     
       public static void leeriniciales() {
         Scanner Scan = null;

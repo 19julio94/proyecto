@@ -1,7 +1,6 @@
 package proyecto;
-
+import Imp.JPANE;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +18,8 @@ public class Datos {
         try {
             f = new FileWriter(nomeFich, true);
             escribir = new PrintWriter(f);
-            String esc = JOptionPane.showInputDialog("Introduce tus inicinales");
+          // String esc= JPANE("Introduce las iniciales");
+            String esc = JOptionPane.showInputDialog("Introduce tus iniciales");
             escribir.append(esc);
             escribir.append("\n");
 
@@ -31,7 +31,6 @@ public class Datos {
         }
 
     }
-    
     
     
 }
