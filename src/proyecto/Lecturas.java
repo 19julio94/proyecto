@@ -1,5 +1,5 @@
 package proyecto;
-import Imp.JPANE;
+//import Imp.JPANE;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

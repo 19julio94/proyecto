@@ -1,5 +1,5 @@
 package proyecto;
-import Imp.JPANE;
+//import Imp.JPANE;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -31,6 +31,9 @@ public class Datos {
         }
 
     }
+    
+    
+    
     
     
 }
